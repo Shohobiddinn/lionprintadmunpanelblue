@@ -1,0 +1,370 @@
+.new_account_add {
+    background-color: $sc_blue-color;
+    height: 100vh;
+
+    .container {
+        .new_nav {
+            margin-left: 300px;
+            @include flex(center, space-between);
+            padding: 15px 0;
+
+            &_title {
+                @include fond(400, 20);
+                color: $pr_black-color;
+                text-transform: capitalize;
+            }
+
+            &_content {
+                @include flex(center, flex-start);
+                gap: 20px;
+
+                &_exit {
+                    &_title {
+                        @include fond(400, 15);
+                        color: $pr_blue-color;
+                        text-transform: capitalize;
+                        border-radius: 5px;
+                        padding: 2px 10px;
+                        transition: 0.3s;
+
+                        &:hover {
+                            background-color: #E5E7EB;
+                            // background-color: $sc_blue-color;
+                        }
+                    }
+                }
+
+                &_save {
+                    @include fond(400, 15);
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    background-color: $pr_blue-color;
+                    color: $pr_white-color;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .new_bottom {
+            margin-left: 300px;
+            @include flex(flex-start, space-between);
+            gap: 50px;
+
+            &_category {
+                width: 350px;
+                height: 500px;
+                border-radius: 15px;
+                background-color: $pr_white-color;
+                padding: 20px;
+
+                .category_content {
+                    @include flex(center, flex-start);
+                    gap: 20px;
+                    cursor: pointer;
+
+                    &_icon {
+                        svg {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    &_title {
+                        @include fond(400, 15);
+                        color: $pr_black-color;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            .new_information {
+                width: calc(100% - 250px);
+                background-color: $pr_white_color;
+                border-radius: 15px;
+                padding: 20px;
+                @include flex(flex-start, space-between);
+                gap: 30px;
+
+                &_info {
+                    width: 850px;
+
+                    .info_title {
+                        @include fond(400, 18);
+                        color: $pr_black-color;
+                        text-transform: capitalize;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #dce1e6;
+                    }
+
+                    .info_content {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 30px;
+                        padding: 20px 0;
+
+                        &_input {
+                            width: calc((100% / 3) - 20px);
+
+                            &_title {
+                                @include fond(400, 12);
+                                color: $pr_black-color;
+                                text-transform: capitalize;
+                                margin-bottom: 5px;
+                            }
+
+                            input {
+                                border-radius: 5px;
+                                width: 100%;
+                                height: 35px;
+                                padding: 5px 10px;
+                                border: 0.5px solid $pr_black-color;
+                                outline: none;
+                                background: $sc_blue-color;
+
+                                // border-color: ;
+                                &::placeholder {
+                                    @include fond(400, 10);
+                                    color: $pr_black-color;
+                                    text-transform: capitalize;
+                                }
+                            }
+
+                            .gender {
+                                @include flex(center, flex-start);
+                                gap: 50px;
+
+                                .gender_content {
+                                    @include flex(center, flex-start);
+                                    gap: 10px;
+
+                                    input[type=radio] {
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+
+                                    label {
+                                        @include fond(400, 15);
+                                        text-transform: capitalize;
+                                        color: $pr_black-color;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .new_accounts {
+                        @include flex(flex-start, space-between);
+                        gap: 30px;
+
+                        .new_account {
+                            width: 566px;
+
+                            &_title {
+                                @include fond(500, 15);
+                                color: $pr_black-color;
+                                text-transform: capitalize;
+                                border-bottom: 1px solid #dce1e6;
+                                padding-bottom: 10px;
+                            }
+
+                            &_content {
+                                width: 100%;
+                                @include flex(flex-start, space-between);
+                                flex-wrap: wrap;
+                                column-gap: 30px;
+                                row-gap: 20px;
+                                padding: 20px 0;
+
+                                &_input {
+                                    width: calc((100% / 2) - 15px);
+
+                                    &_title {
+                                        @include fond(400, 12);
+                                        color: $pr_black-color;
+                                        text-transform: capitalize;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    input {
+                                        width: 100%;
+                                        height: 35px;
+                                        border-radius: 5px;
+                                        outline: none;
+                                        border: 0.5px solid $pr_black-color;
+                                        background: $sc_blue-color ;
+                                        padding: 5px 10px;
+                                        @include fond(400, 12);
+                                        color: $pr_black-color;
+                                        // text-transform: capitalize;
+
+                                        &::placeholder {
+                                            @include fond(400, 10);
+                                            color: $pr_black-color;
+                                            text-transform: capitalize;
+                                        }
+                                    }
+
+                                    .selected {
+                                        position: relative;
+
+                                        &_option {
+                                            @include flex(center, flex-start);
+                                            gap: 20px;
+                                            cursor: pointer;
+                                            background-color: $sc_blue-color;
+                                            padding: 7px 10px;
+                                            border-radius: 5px;
+                                            user-select: none;
+
+                                            &_btns {
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 3px;
+
+                                                span {
+                                                    width: 20px;
+                                                    height: 3px;
+                                                    background-color: $sc_grey-color;
+                                                    display: inline-block;
+                                                    border-radius: 3px;
+
+                                                    &:nth-child(3) {
+                                                        width: 15px;
+                                                    }
+                                                }
+                                            }
+
+                                            &_title {
+                                                @include fond(400, 15);
+                                                color: $pr_black-color;
+                                                text-transform: capitalize;
+                                            }
+
+                                            &_icon {
+                                                margin-left: auto;
+
+
+                                                svg {
+                                                    rotate: 180deg;
+                                                    width: 15px;
+                                                    height: 15px;
+                                                }
+                                            }
+                                        }
+
+                                        &_content {
+                                            width: 100%;
+                                            padding: 10px;
+                                            background-color: $sc_grey_color;
+                                            border: 1px solid #00000008;
+                                            overflow-y: auto;
+                                            height: 70px;
+                                            display: none;
+                                            position: absolute;
+                                            top: 100%;
+                                            left: 0;
+                                            border-bottom-left-radius: 5px;
+                                            border-bottom-right-radius: 5px;
+                                            z-index: 2;
+
+                                            &::-webkit-scrollbar {
+                                                display: none;
+                                            }
+
+                                            // box-shadow: 0 -2px 2px #0000000f, 0 0 2px #00000008;
+                                            &_title {
+                                                @include fond(400, 13);
+                                                color: $pr_black-color;
+                                                text-transform: capitalize;
+                                                cursor: pointer;
+                                                margin-bottom: 5px;
+                                                border-radius: 5px;
+
+                                                &:hover {
+                                                    background-color: $sc_blue-color;
+                                                }
+                                            }
+                                        }
+
+                                        &.active {
+                                            .selected_option {
+                                                &_icon {
+                                                    svg {
+                                                        rotate: 0deg;
+                                                    }
+                                                }
+                                            }
+
+                                            .selected_content {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .new_account_date {
+                            width: 280px;
+
+                            &_title {
+                                @include fond(500, 15);
+                                color: $pr_black-color;
+                                text-transform: capitalize;
+                                border-bottom: 1px solid #dce1e6;
+                                padding-bottom: 10px;
+                            }
+
+                            &_input {
+                                padding: 12px 0px;
+
+                                &_title {
+                                    @include fond(400, 12);
+                                    color: $pr_black-color;
+                                    text-transform: capitalize;
+                                    margin-bottom: 10px;
+                                }
+
+                                input {
+                                    width: 100%;
+                                    height: 35px;
+                                    border-radius: 5px;
+                                    outline: none;
+                                    border: 0.5px solid $pr_black-color;
+                                    background: $sc_blue-color ;
+                                    padding: 5px 10px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                &_image {
+                    cursor: pointer;
+
+                    input {
+                        display: none;
+                    }
+
+                    label {
+                        width: 200px;
+                        height: 300px;
+                        cursor: pointer;
+
+                        img {
+                            width: 200px;
+                            height: 260px;
+                            object-fit: cover;
+                            border-radius: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

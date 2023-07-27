@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$pr-fond : 'Inter',
+sans-serif;
+$white-color: #ffffff;
+$pr_black-color: #000000;
+$grey-color: #E5E5E5;
+$blue-color: #012061;
+$pr_white_color:#FFFFFF;
+$sc_white_color:#F2F2F2;
+// $pr_blue_color:#001F62;
+$pr_blue-color:#000080;
+// $sc_blue_color:#4D5D81;  
+$sc_blue-color:#C0DBFF;
+$sc_grey_color:#8FA8C7;
+$index_color:#F5FBF7;
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    max-width:1920px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}

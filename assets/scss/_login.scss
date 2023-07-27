@@ -1,0 +1,78 @@
+.login_page {
+    background-color:$pr_blue_color;
+    .container {
+        @include flex(center, center);
+        width: 100%;
+        height: 100vh;
+
+        .login_page_content {
+            @include flex(center, center);
+            flex-direction: column;
+            background-color: $sc-blue-color;
+            border-radius: 15px;
+            padding: 30px;
+
+            &_logo {
+                margin-bottom: 30px;
+
+                img {
+                    width: 231px;
+                    height: 126px;
+                }
+            }
+
+            &_title {
+                text-align: center;
+                @include fond(400, 25);
+                color: $pr_blue-color;
+                margin-bottom: 35px;
+            }
+
+            &_inputs {
+                margin-bottom: 30px;
+
+                &_input {
+                    display: flex;
+                    flex-direction: column;
+
+                    input {
+                        width: 333px;
+                        height: 42px;
+                        border-radius: 15px;
+                        margin-bottom: 21px;
+                        outline: none;
+                        border: none;
+                        background: $pr_white-color;
+                        padding: 14px 18px;
+                        @include fond(400, 20);
+                        color: $blue-color;
+
+                        &::placeholder {
+                            @include fond(400, 20);
+                            color: $pr_black-color;
+
+                        }
+                    }
+                }
+            }
+
+            &_icon {
+                @include flex(center, center);
+                background-color: $sc_blue-color;
+                width: 100%;
+                height: 42px;
+                color: $white-color;
+                @include fond(400, 23);
+                padding: 12px;
+                border-radius: 15px;
+                cursor: pointer;
+                user-select: none;
+
+                &:hover {
+                    background-color: $pr_blue_color;
+                    color: $pr_white_color;
+                }
+            }
+        }
+    }
+}
